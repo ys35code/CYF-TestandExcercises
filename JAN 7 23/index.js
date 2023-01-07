@@ -55,3 +55,44 @@ console.log(
     ? "Passed :)"
     : "Not yet :("
 );
+
+// ----------------------------------------------------------------
+
+// Challenge 2:
+
+// Given a two-dimensional array of integers, return the flattened version of the array with all the integers in the sorted (ascending) order.
+
+// Example:
+
+// Given [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]], your function should return [1, 2, 3, 4, 5, 6, 7, 8, 9].
+
+function test(expected, actual) {
+  for (let i = 0; i < expected.length; i++) {
+    if (expected[i] !== actual[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function flattenedAndSort(array) {
+  let newArray = array.flat().sort((a, b) => a - b);
+  console.log(newArray);
+  return newArray;
+}
+
+console.log(
+  "Basic single digit case = " +
+    test(
+      flattenedAndSort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]),
+      [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    )
+);
+
+console.log(
+  "Two digit number case = " +
+    test(
+      flattenedAndSort([[14, 2, 1], [4, 6, 5], [], [9, 7, 8]]),
+      [1, 2, 4, 5, 6, 7, 8, 9, 14]
+    )
+);
