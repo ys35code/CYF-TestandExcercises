@@ -1,3 +1,7 @@
+// Define an array containing the 3 people defined below.
+// Return an array of the people's names (hint: use map).
+// Filter the people to return an array with the person younger than 28 years old (hint: use filter).
+
 let person1 = {
   name: "Alice",
   age: 25,
